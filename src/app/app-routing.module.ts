@@ -10,7 +10,11 @@ const routes: Routes = [
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'
+  },  {
+    path: 'geocoder',
+    loadChildren: () => import('./geocoder/geocoder.module').then( m => m.GeocoderPageModule)
   },
+
 ];
 
 @NgModule({

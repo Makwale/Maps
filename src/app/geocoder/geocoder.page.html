@@ -1,0 +1,13 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>Geocoder</ion-title>
+
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-searchbar #address (keyup)="search(address)"></ion-searchbar>
+    <ion-item #locAddress *ngFor="let address of addresses; let i=index" (click)="select(address)">
+        {{address}}
+    </ion-item> <br>
+</ion-content>

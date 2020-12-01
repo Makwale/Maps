@@ -41,7 +41,7 @@ export class HomePage {
     mapboxgl.accessToken = 'pk.eyJ1IjoibWFudWVsbWFrd2FsZSIsImEiOiJja2hsc3lmYWUyZzRnMnRsNnY2NWIyeGR6In0.1MGnfpXj_dV2QBO3SchfqA';
     let map = new mapboxgl.Map({
         container: 'map',
-        style: 'mapbox://styles/mapbox/navigation-preview-day-v4',
+        style: 'mapbox://styles/mapbox/streets-v11',
         center: [25.34, -30.181],
         zoom: 4,
     });
@@ -56,10 +56,13 @@ export class HomePage {
     map.addControl(
     new MapboxGeocoder({
       accessToken: mapboxgl.accessToken,
+      countries: 'za',
       mapboxgl: mapboxgl,
       marker: {
         color: "Red"
-      }
+      },
+      
+
       })
     );
 
@@ -112,7 +115,7 @@ export class HomePage {
     .setLngLat([25.34, -30.181])
     .addTo(this.map);
 
-    this.map = this.showMap('mapbox://styles/mapbox/streets-v11');
+    this.map = this.showMap();
 
   }
 
