@@ -47,14 +47,14 @@ export class HomePage {
     });
 
     map.addControl(
-    new MapboxDirections({
+    new mapboxgl.MapboxDirections({
       accessToken: mapboxgl.accessToken
     }),
       'bottom-left'
     );
 
     map.addControl(
-    new MapboxGeocoder({
+    new mapboxgl.MapboxGeocoder({
       accessToken: mapboxgl.accessToken,
       countries: 'za',
       mapboxgl: mapboxgl,
